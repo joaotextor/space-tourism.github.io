@@ -1,0 +1,22 @@
+@import "reset.css";
+@import "uclasses.css";
+@import "cproperties.css";
+@import "components.css";
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+~~~~~~~~~~~~~~~~~~~~ HOME ~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.primary-header {
+    justify-content: space-between;
+}
+
+.primary-header div {
+    padding: 3rem 3rem;
+}
+
+/* .container h1 span {
+    display: block;
+    margin-left: .5rem;
+    padding: var(--underline-gap, 2rem) 0;
+} */

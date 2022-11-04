@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <title></title>
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,7 +11,7 @@
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="style.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
     </head>
     <body></body>
 
@@ -99,7 +100,15 @@
                 <h2 class="numbered-title"><span>03</span> Interactive elements</h2>
                 
                 <!-- navigation -->
-                <div></div>
+                <div>
+                    <nav>
+                        <ul class="primary-navigation flex underline-indicators ff-sans-cond">
+                            <li class="active"><a class="uppercase text-accent letter-spacing-2 " href="#"><span>00</span>Active</a>
+                            <li><a class="uppercase text-accent letter-spacing-2 " href="#"><span>01</span>Hovered</a>
+                            <li><a class="uppercase text-accent letter-spacing-2 " href="#"><span>02</span>Idle</a>
+                        </ul>
+                    </nav>
+                </div>
                 
                 <div style="margin-top: 5rem" class="flex">
                     <div>
@@ -107,14 +116,31 @@
                         <a href="#" class="large-button uppercase ff-serif fs-600 text-dark bg-white">Explore</a>
                     </div>
                     
-                    <div style="margin-bottom: 50vh">
+                    <div class="flow" style="margin-bottom: 50vh; --flow-space: 4rem">
                         <!-- Tabs -->
+                    
+                    <div class="tab-list underline-indicators ff-sans-cond flex" style="margin-top:40vh">
+                        <button aria-selected="true" class="bg-dark text-accent uppercase letter-spacing-2">Moon</button> <!-- aria stands for Accessible Rich Internet Applications-->
+                        <button aria-selected="false" class="bg-dark text-accent uppercase letter-spacing-2">Mars</button>
+                        <button aria-selected="false" class="bg-dark text-accent uppercase letter-spacing-2">Europa</button>
+                    </div>
                         
                         
-                        <!-- Dots -->
-                        
-                        
-                        <!-- Numbers -->
+                    <!-- Dots -->
+                    <div class="dot-indicators flex" style="margin: 10vh 0">
+                        <button aria-selected="true"><span class="sr-only">Slide title</span></button>
+                        <button aria-selected="false"><span class="sr-only">Slide title</span></button>
+                        <button aria-selected="false"><span class="sr-only">Slide title</span></button>
+                    </div>
+
+                    <!-- Numbers -->
+
+                    <div class="numbered-indicators grid fs-600 ff-serif" style="margin: 10vh 0">
+                        <button class="bg-dark text-white" aria-selected="true"><span class="sr-only">Numbered buttons</span>1</button>
+                        <button class="bg-dark text-white" aria-selected="false"><span class="sr-only">Numbered buttons</span>2</button>
+                        <button class="bg-dark text-white" aria-selected="false"><span class="sr-only">Numbered buttons</span>3</button>
+                    </div>
+
                     </div>
                 </div>
                 
