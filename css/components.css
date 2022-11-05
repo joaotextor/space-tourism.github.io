@@ -1,12 +1,17 @@
 @import "styles.css";
 
 /* ------------------- */
-/* Compontents         */
+/* * Compontents       */
 /* ------------------- */
 
+/*~ ------------------- */
+/* ~      HOME          */
+/*~ ------------------- */
+
 .large-button {
+    font-size: 2rem;
     display: inline-grid;
-    position: absolute;
+    position: relative;
     border-radius: 50%;
     z-index: 1;
     place-items: center; /*Shorthand for align-items and justify content*/
@@ -33,6 +38,10 @@
     opacity: 1;
     transform: scale(1.5);
 }
+
+/** ------------------- */
+/* *      NAVIGATION    */
+/** ------------------- */
 
 .primary-navigation {
     list-style: none;
@@ -71,10 +80,18 @@
     border-color: hsl(var(--clr-white) / 1);
 }
 
+/** ------------------- */
+/* *    TAB LIST        */
+/** ------------------- */
+
 .tab-list {
     border-width: 0 0 1rem 0;
     --gap: 2.5rem;
 }
+
+/** ------------------- */
+/* *    DOT LIST        */
+/** ------------------- */
 
 .dot-indicators > * {
     aspect-ratio: 1;

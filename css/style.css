@@ -3,9 +3,33 @@
 @import "cproperties.css";
 @import "components.css";
 
+
+body {
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+}
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
 ~~~~~~~~~~~~~~~~~~~~ HOME ~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.home {
+    background-image: url("../assets/home/background-home-mobile.jpg");
+}
+
+@media (min-width: 35em) {
+    .home {
+        background-position: center center;
+        background-image: url("../assets/home/background-home-tablet.jpg");
+    } 
+}
+
+@media (min-width: 45em) {
+    .home {
+        background-image: url("../assets/home/background-home-desktop.jpg");
+    }
+}
 
 .primary-header {
     justify-content: space-between;
@@ -14,9 +38,3 @@
 .primary-header div {
     padding: 3rem 3rem;
 }
-
-/* .container h1 span {
-    display: block;
-    margin-left: .5rem;
-    padding: var(--underline-gap, 2rem) 0;
-} */
