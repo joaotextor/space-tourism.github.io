@@ -44,13 +44,58 @@
 /** ------------------- */
 
 .primary-navigation {
+    flex-direction: row;
     list-style: none;
-    --gap: 3rem;
     --underline-gap: 2rem;
     padding: 0;
     margin: 0;
+    background: hsl(var(--clr-dark) / 0.95);
 }
 
+.mobile-nav-toggle {
+    display: none;
+}
+
+@supports (backdrop-filter: blur(30px)) {
+    .primary-navigation {
+        background: hsl(var(--clr-white) / 0.03);
+        backdrop-filter: blur(30px);
+    }
+}
+
+@media (max-width: 35rem) {
+    .primary-navigation {
+        position: fixed;
+        flex-direction: column;
+        list-style: none;
+        z-index: 1000;
+        inset: 0 0 0 30%;
+        --underline-gap: .5rem;
+        padding: min(20rem, 15vh) 2rem;
+        margin: 0;
+        transform: translateX(100%);
+        transition: transform 400ms ease-in-out;
+    }
+
+    .primary-navigation.underline-indicators > .active {
+        border: 0;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        z-index: 2000;
+        right: 1rem;
+        top: 2rem;
+        background: transparent;
+        background-image: url("../assets/shared/icon-hamburger.svg");
+        background-repeat: no-repeat;
+        width: 1.5rem;
+        aspect-ratio: 1;
+        border: 0;
+    }
+    
+}
 
 .primary-navigation a:any-link {
     text-decoration: none;
@@ -79,6 +124,9 @@
     color: hsl(var(--clr-white) / 1);
     border-color: hsl(var(--clr-white) / 1);
 }
+
+
+
 
 /** ------------------- */
 /* *    TAB LIST        */
