@@ -30,11 +30,3 @@ body {
         background-image: url("../assets/home/background-home-desktop.jpg");
     }
 }
-
-.primary-header {
-    /* justify-content: space-between; */
-}
-
-.primary-header div {
-    padding: 3rem 0 0 3rem;
-}

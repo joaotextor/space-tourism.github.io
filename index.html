@@ -16,6 +16,7 @@
 
   <!-- Load the script with 'defer', which waits for the page to load so it can load the script -->
   <script src="js/index.js" defer></script> 
+  <base href="/">
   
 </head>
 <body class="home">
@@ -25,7 +26,7 @@
     </div>
     <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Menu</span></button>
     <nav>
-        <ul id="primary-navigation" class="primary-navigation flex underline-indicators ff-sans-cond">
+        <ul id="primary-navigation" data-visible="false" class="primary-navigation flex underline-indicators ff-sans-cond">
             <li class="active"><a class="uppercase text-white letter-spacing-2 " href="index.html"><span>00</span>Home</a>
             <li><a class="uppercase text-white letter-spacing-2 " href="destination.html"><span>01</span>Destination</a>
             <li><a class="uppercase text-white letter-spacing-2 " href="crew.html"><span>02</span>Crew</a>

@@ -1,13 +1,18 @@
-const button = document.querySelector('.mobile-nav-toggle')
-const nav = document.querySelector('#primary-navigation')
+const navToggle = document.querySelector('.mobile-nav-toggle')
+const nav = document.querySelector('.primary-navigation')
 
-button.addEventListener('click', () => {
-    if (nav.style.transform == 'translateX(100%)') {
+navToggle.addEventListener('click', () => {
+    const visibility = nav.getAttribute('data-visible')
+    if (visibility === 'false') {
         nav.style.transform = 'translateX(0%)'
-        button.style.backgroundImage = "url('../assets/shared/icon-close.svg')"
+        navToggle.style.backgroundImage = "url('../assets/shared/icon-close.svg')"
+        nav.setAttribute('data-visible', true)
+        navToggle.firstChild.setAttribute('aria-expanded', 'true')
     } else {
         nav.style.transform = 'translateX(100%)'
-        button.style.backgroundImage = "url('../assets/shared/icon-hamburger.svg')"
+        navToggle.style.backgroundImage = "url('../assets/shared/icon-hamburger.svg')"
+        nav.setAttribute('data-visible', false)
+        navToggle.firstChild.setAttribute('aria-expanded', 'false')
     }
 
 })
