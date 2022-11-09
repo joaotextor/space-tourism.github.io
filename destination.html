@@ -38,16 +38,20 @@
 
     <main id="main" class="grid-container grid-container--destination flow">
         <h1 class="numbered-title ff-sans-cond letter-spacing-3"><span aria-hidden="true">01</span> Pick your destination</h1>
-        <img src="assets/destination/image-moon.png" alt="The Moon">
+        <picture>
+          <source srcset="assets/destination/image-moon.webp" type="image/webp">
+          <img src="assets/destination/image-moon.png" alt="The Moon">
+        </picture>
+        
 
         <div class="tab-list underline-indicators ff-sans-cond flex">
-            <button aria-selected="true" class="bg-transparent text-accent uppercase letter-spacing-2">Moon</button>
-            <button aria-selected="false" class="bg-transparent text-accent uppercase letter-spacing-2">Mars</button>
-            <button aria-selected="false" class="bg-transparent text-accent uppercase letter-spacing-2">Europa</button>
-            <button aria-selected="false" class="bg-transparent text-accent uppercase letter-spacing-2">Titan</button>
+            <button aria-selected="true" class="text-accent uppercase letter-spacing-2">Moon</button>
+            <button aria-selected="false" class="text-accent uppercase letter-spacing-2">Mars</button>
+            <button aria-selected="false" class="text-accent uppercase letter-spacing-2">Europa</button>
+            <button aria-selected="false" class="text-accent uppercase letter-spacing-2">Titan</button>
         </div>
 
-        <article class="destination-info">
+        <article class="destination-info flow">
             <h2 class="ff-serif text-white fs-800 uppercase">Moon</h2>
             <p class="ff-sans text-accent">
                 See our planet as you’ve never seen it before. A perfect relaxing trip away to help 

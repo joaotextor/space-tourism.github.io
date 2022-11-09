@@ -125,10 +125,11 @@
 }
 
 .underline-indicators > * {
-    padding: var(--underline-gap, 1rem) 0;
+    padding: var(--underline-gap, .5rem) 0;
     border: 0;
     cursor: pointer;
     border-bottom: .2rem solid hsl(var(--clr-white) / 0);
+    background: transparent;
 }
 
 .underline-indicators > *:hover,

@@ -29,6 +29,10 @@
     margin-top: var(--flow-space, 1rem);
 }
 
+.flow--space-small {
+    --flow-space: .75rem;
+}
+
 .container {
     padding-inline: 2em;
     margin-inline: auto;
@@ -139,14 +143,6 @@
     font-weight: 700;
 }
 
-.commander-title {
-    padding-bottom: 1rem;
-}
-
-.commander-title span {
-    color: hsl(var(--clr-white) / .5);
-    padding-bottom: .5rem;
-}
 
 /* ~ LAYOUT */
 
@@ -155,7 +151,7 @@
     display: grid;
     place-items: center;
     padding-inline: 1rem;
-    /* padding-bottom: 4rem; */
+    padding-bottom: 4rem;
 }
 
 :is(.grid-container) p {
@@ -173,7 +169,7 @@
         'content';
 }
 
-.grid-container--destination > img {
+.grid-container--destination > picture {
     grid-area: image;
     max-width: 60%;
 }
@@ -206,7 +202,7 @@
     border-bottom: 1px solid hsl( var(--clr-white) / .1);
 }
 
-.grid-container--crew img {
+.grid-container--crew picture {
     width: 50%;
     margin-inline: auto;
 }
@@ -217,6 +213,10 @@
 
 .grid-container--crew > .crew-info {
     grid-area: content;
+}
+
+.crew-info h2 {
+    color: hsl(var(--clr-white) / .5);
 }
 
 .grid-container--crew {
@@ -240,7 +240,7 @@
     }
 
     .grid-container--crew {
-        --flow-space: 2rem;
+        padding-bottom: 0;
         grid-template-areas:
             'title'
             'content'
@@ -249,8 +249,7 @@
     }
 
     .grid-container--crew div:first-of-type {
-        border-bottom: none;
-        place-self: end center;
+        align-self: end;
     }
 
     .grid-container--crew > .crew-info {
@@ -263,7 +262,7 @@
     .grid-container {
         text-align: left;
         column-gap: var(--container-gap, 4rem);
-        grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 33rem)) minmax(1rem, 1fr);
+        grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(1rem, 1fr);
     }
 
     /*~ HOME LAYOUT  */
@@ -296,7 +295,7 @@
         padding-top: 2rem;
     }
 
-    .grid-container--destination > img {
+    .grid-container--destination > picture {
         max-width: 90%;
     }
 
@@ -308,7 +307,6 @@
     /*~ CREW LAYOUT  */
 
     .grid-container--crew {
-        /* --flow-space: 2rem; */
         grid-template-areas:
             '. title image .'
             '. content image .'
@@ -319,12 +317,15 @@
         place-self: start;
     }
 
-    .grid-container--crew img {
-        width: 100%;
+    .grid-container--crew picture {
+        width: max(400px, 100%);
+    }
+
+    .grid-container--crew .crew-info {
+        justify-self: start;
     }
 
     .grid-container--crew .dot-indicators {
-        padding-left: .6rem;
         place-self: start;
     }
 }
