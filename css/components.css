@@ -101,6 +101,7 @@
         position: relative;
         height: 1px;
         background: hsl(var(--clr-white) / 0.25);
+        margin-left: 2rem;
         margin-right: -3rem;
         width: 100%;
     }
@@ -196,6 +197,10 @@
 /** ------------------- */
 /* *    DOT LIST        */
 /** ------------------- */
+
+.dot-indicators {
+    margin-top: 0;
+}
 
 .dot-indicators > * {
     aspect-ratio: 1;
