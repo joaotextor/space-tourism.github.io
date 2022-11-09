@@ -16,8 +16,6 @@ This is a solution to the [Space tourism website challenge on Frontend Mentor](h
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -51,17 +49,22 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 - Semantic HTML5 markup
 - CSS custom properties
+- CSS utility classes
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- Accessibility
+- Google Fonts
 
 ### What I learned
 
+The use of custom properties and utily classes together makes the job so easy in the long run.
+
+I should, and definately will, use more properties like "clamp" and "min-max" in the future. It makes creating responsive layouts more easy.
+
+It was amazing to learn some tricks on accessibility and how to make the page screen-reader friendly and easy to navigate using TAB key.
+
+....
 Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
 To see how you can add code snippets, see below:

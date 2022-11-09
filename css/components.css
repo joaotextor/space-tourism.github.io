@@ -186,6 +186,13 @@
     --gap: 2.5rem;
 }
 
+@media (max-width: 45em) {
+    .tab-list-mobile {
+        justify-content: center;
+        margin-inline: auto;
+    }
+}
+
 /** ------------------- */
 /* *    DOT LIST        */
 /** ------------------- */
