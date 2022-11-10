@@ -46,81 +46,42 @@ const travelTime = document.getElementById('travel-time')
 ~ ----------------------------------
 */
 
-//*-- MOON
-const btnMoon_click = () => {
-    // Button States
-    btnMoon.ariaSelected = true
-    btnMars.ariaSelected = false
-    btnEuropa.ariaSelected = false
-    btnTitan.ariaSelected = false
+//*-- PAGE CHANGE
+const pageChange = (destination) => {
+    let destIndex = 0
+    switch (destination) {
+        case 'moon':
+            destIndex = 0
+            btnMoon.ariaSelected = true
+            btnMars.ariaSelected = btnEuropa.ariaSelected = btnTitan.ariaSelected = false
+            break
+        case 'mars':
+            destIndex = 1
+            btnMars.ariaSelected = true
+            btnMoon.ariaSelected = btnEuropa.ariaSelected = btnTitan.ariaSelected = false
+            break
+        case 'europa':
+            destIndex = 2
+            btnEuropa.ariaSelected = true
+            btnTitan.ariaSelected = btnMars.ariaSelected = btnMoon.ariaSelected = false
+            break
+        case 'titan':
+            destIndex = 3
+            btnTitan.ariaSelected = true
+            btnMoon.ariaSelected = btnMars.ariaSelected = btnEuropa.ariaSelected = false            
+    }
 
     // Destination details
-    destName.innerText = planets[0].name
-    destDescription.innerText = planets[0].description
-    distance.innerText = planets[0].distance
-    travelTime.innerText = planets[0].travel
+    destName.innerText = planets[destIndex].name
+    destDescription.innerText = planets[destIndex].description
+    distance.innerText = planets[destIndex].distance
+    travelTime.innerText = planets[destIndex].travel
 
     // Images
-    imgWebp.srcset = planets[0].images.webp
-    imgPng.src = planets[0].images.png
+    imgWebp.srcset = planets[destIndex].images.webp
+    imgPng.src = planets[destIndex].images.png
 }
 
-//*-- MARS
-const btnMars_click = () => {
-    // Button States
-    btnMoon.ariaSelected = false
-    btnMars.ariaSelected = true
-    btnEuropa.ariaSelected = false
-    btnTitan.ariaSelected = false
-
-    // Destination details
-    destName.innerText = planets[1].name
-    destDescription.innerText = planets[1].description
-    distance.innerText = planets[1].distance
-    travelTime.innerText = planets[1].travel
-
-    // Images
-    imgWebp.srcset = planets[1].images.webp
-    imgPng.src = planets[1].images.png
-}
-
-//*-- EUROPA
-const btnEuropa_click = () => {
-    // Button States
-    btnMoon.ariaSelected = false
-    btnMars.ariaSelected = false
-    btnEuropa.ariaSelected = true
-    btnTitan.ariaSelected = false
-
-    // Destination details
-    destName.innerText = planets[2].name
-    destDescription.innerText = planets[2].description
-    distance.innerText = planets[2].distance
-    travelTime.innerText = planets[2].travel
-
-    // Images
-    imgWebp.srcset = planets[2].images.webp
-    imgPng.src = planets[2].images.png
-}
-
-//*-- TITAN
-const btnTitan_click = () => {
-    // Button States
-    btnMoon.ariaSelected = false
-    btnMars.ariaSelected = false
-    btnEuropa.ariaSelected = false
-    btnTitan.ariaSelected = true
-
-    // Destination details
-    destName.innerText = planets[3].name
-    destDescription.innerText = planets[3].description
-    distance.innerText = planets[3].distance
-    travelTime.innerText = planets[3].travel
-
-    // Images
-    imgWebp.srcset = planets[3].images.webp
-    imgPng.src = planets[3].images.png
-}
 
 /*
 ~ ----------------------------------
@@ -128,7 +89,7 @@ const btnTitan_click = () => {
 ~ ----------------------------------
 */
 
-btnMoon.onclick = btnMoon_click
-btnMars.onclick = btnMars_click
-btnEuropa.onclick = btnEuropa_click
-btnTitan.onclick = btnTitan_click
+btnMoon.onclick = () => pageChange('moon')
+btnMars.onclick = () => pageChange('mars')
+btnEuropa.onclick = () => pageChange('europa')
+btnTitan.onclick = () => pageChange('titan')
