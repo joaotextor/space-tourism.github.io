@@ -56,10 +56,15 @@
     flex-direction: row;
     --gap: clamp(1.5rem, 5vw, 3.5rem);
     list-style: none;
-    --underline-gap: 2rem;
+    --underline-gap: 0rem;
     padding: 0;
     margin: 0;
     background: hsl(var(--clr-dark) / 0.95);
+}
+
+.primary-navigation a {
+    display: table;
+    line-height: 6rem;
 }
 
 .logo {
@@ -155,6 +160,10 @@
         margin: 0;
         transform: translateX(100%);
         transition: transform 400ms ease-in-out;
+    }
+
+    .primary-navigation a {
+        line-height: 2rem;
     }
 
     .primary-navigation.underline-indicators > .active {

@@ -152,7 +152,7 @@
     display: grid;
     place-items: center;
     padding-inline: 1rem;
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
 }
 
 :is(.grid-container) p {
@@ -173,6 +173,8 @@
 .grid-container--destination > picture {
     grid-area: image;
     max-width: 60%;
+    align-self: start;
+    padding-top: 2rem;
 }
 
 .grid-container--destination > .tab-list {
@@ -201,10 +203,14 @@
 .grid-container--crew div:first-of-type {
     grid-area: image;
     border-bottom: 1px solid hsl( var(--clr-white) / .1);
+    align-self: end;
+    /* margin-bottom: .5rem; */
+    /* max-height: 35vh; */
 }
 
 .grid-container--crew picture {
-    width: 50%;
+    max-width: 60%;
+    align-self: end;
     margin-inline: auto;
 }
 
@@ -214,6 +220,7 @@
 
 .grid-container--crew > .crew-info {
     grid-area: content;
+    align-self: start;
 }
 
 .crew-info h2 {
@@ -227,6 +234,47 @@
         'image'
         'dots'
         'content';
+        grid-template-rows: 4% 54% 3% 35%;
+}
+
+/*~ TECHNOLOGY LAYOUT  */
+
+.grid-container--technology .numbered-title {
+    align-self: end;
+}
+
+.grid-container--technology img {
+    grid-area: image;
+    align-self: start;
+    margin: 0;
+}
+
+.grid-container--technology > .numbered-indicators {
+    grid-area: tabs;
+    flex-direction: row;
+    align-self: center;
+    margin: 0;
+} 
+
+.grid-container--technology > .tech-info {
+    grid-area: content;
+    align-self: start;
+}
+
+.grid-container--technology {
+    --flow-space: 2rem;
+    padding-inline:0;
+    row-gap: 2rem;
+    grid-template-areas:
+        'title'
+        'image'
+        'tabs'
+        'content';
+        grid-template-rows: 4% max-content 10% auto;
+}
+
+.tech-info h2 {
+    color: hsl(var(--clr-white) / .5);
 }
 
 @media (min-width: 35em) {
@@ -247,6 +295,7 @@
             'content'
             'dots'
             'image';
+        grid-template-rows: 5% 35% 3% minmax(58%, 20rem);
     }
 
     .grid-container--crew div:first-of-type {
@@ -257,12 +306,41 @@
         margin-top: 3.5rem;
         margin-bottom: 2.5rem;
     }
+
+    /*~ TECHNOLOGY LAYOUT  */
+
+    .grid-container--technology {
+        grid-template-rows: 4% max-content 10% auto;
+    }
+
+    .grid-container--technology img {
+        align-self: center;
+        /* margin-right: -30px; */
+    }
+
+    .grid-container--technology .numbered-title {
+        align-self: center;
+        margin-left: 3rem;
+    }
+
+    .grid-container--technology {
+        --flow-space: 2rem;
+        padding-inline:0;
+        row-gap: 2rem;
+        grid-template-areas:
+            'title'
+            'image'
+            'tabs'
+            'content';
+            grid-template-rows: 10% max-content 10% auto;
+    }
+
 }
 
 @media (min-width: 45em) {
     .grid-container {
         text-align: left;
-        column-gap: var(--container-gap, 2rem);
+        column-gap: var(--container-gap, 4rem);
         grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(1rem, 1fr);
     }
 
@@ -312,7 +390,8 @@
             '. title image .'
             '. content image .'
             '. dots image .';
-        grid-template-columns: .25fr 10fr 8fr .25fr
+        grid-template-columns: .25fr 11.5fr 8fr .25fr;
+        grid-template-rows: .5fr 2.5fr .5fr;
     }
 
     .grid-container--crew > .numbered-title {
@@ -320,7 +399,9 @@
     }
 
     .grid-container--crew picture {
-        width: min(500px, 100%);
+        grid-column: span 2;
+        max-width: 100%;
+        /* width: min(650px, 99%); */
     }
 
     .grid-container--crew .crew-info {
@@ -330,4 +411,50 @@
     .grid-container--crew .dot-indicators {
         place-self: start;
     }
+
+    /*~ TECHNOLOGY LAYOUT  */
+
+    .grid-container--technology {
+        grid-template-areas:
+            '. title title image'
+            '. tabs content image'
+            '. . . image';
+            grid-template-rows: 10% auto 20%;
+            grid-template-columns: .75fr .75fr 11fr 8fr;
+    }
+
+    .grid-container--technology > .numbered-title {
+        margin-left: 0;
+        align-self: start;
+    }
+
+    .grid-container--technology > .numbered-indicators {
+        grid-area: tabs;
+        flex-direction: column;
+        align-self: end;
+        margin: 0;
+    }
+
+    .grid-container--technology > .tech-info {
+        justify-self: left;
+        align-self: end;    
+    }
+
+    .grid-container--technology > .tech-info header h2 {
+        padding-bottom: 0.75rem;
+    }
+    
+    .grid-container--technology #tech-name {
+        grid-column: 3;
+    }
+
+    .grid-container--technology > .tech-info > #tech-details {
+        line-height: 1.8;
+    }
+
+    .grid-container--technology > img {
+        max-width: 100%;
+        justify-self: right;
+    }
+
 }
