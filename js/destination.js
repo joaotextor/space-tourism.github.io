@@ -22,12 +22,15 @@ window.onload = async () => {
 ~ ----------------------------------
 */
 
+//* TAB LIST
+const tabList = document.querySelector('[role="tablist"]');
+const tabs = tabList.querySelectorAll('[role="tab"]')
 
 //* BUTTONS
-const btnMoon = document.getElementById('btn-moon')
-const btnMars = document.getElementById('btn-mars')
-const btnEuropa = document.getElementById('btn-europa')
-const btnTitan = document.getElementById('btn-titan')
+const btnMoon = document.querySelector('[aria-controls="moon-tab"]')
+const btnMars = document.querySelector('[aria-controls="mars-tab"]')
+const btnEuropa = document.querySelector('[aria-controls="europa-tab"]')
+const btnTitan = document.querySelector('[aria-controls="titan-tab"]')
 
 //* IMAGES
 const imgWebp = document.getElementById('webp-image')
@@ -46,28 +49,32 @@ const travelTime = document.getElementById('travel-time')
 ~ ----------------------------------
 */
 
-//*-- PAGE CHANGE
-const pageChange = (destination) => {
+//*-- PAGE CHANGE ON CLICK
+const pageChange_click = (destination) => {
     let destIndex = 0
     switch (destination) {
         case 'moon':
             destIndex = 0
             btnMoon.ariaSelected = true
+            btnMoon.focus()
             btnMars.ariaSelected = btnEuropa.ariaSelected = btnTitan.ariaSelected = false
             break
         case 'mars':
             destIndex = 1
             btnMars.ariaSelected = true
+            btnMars.focus()
             btnMoon.ariaSelected = btnEuropa.ariaSelected = btnTitan.ariaSelected = false
             break
         case 'europa':
             destIndex = 2
             btnEuropa.ariaSelected = true
+            btnEuropa.focus()
             btnTitan.ariaSelected = btnMars.ariaSelected = btnMoon.ariaSelected = false
             break
         case 'titan':
             destIndex = 3
             btnTitan.ariaSelected = true
+            btnTitan.focus()
             btnMoon.ariaSelected = btnMars.ariaSelected = btnEuropa.ariaSelected = false            
     }
 
@@ -83,13 +90,64 @@ const pageChange = (destination) => {
 }
 
 
+//*-- PAGE CHANGE ON KEY DOWN (KEYBOARD NAVIGATION)
+const pageChange_keydown = (e) => {
+    const arrowLeft = "ArrowLeft"
+    const arrowRight = "ArrowRight"
+    const keyPressed = e.key
+    let currentTab = ''
+
+    for (let i=0; i<tabs.length; i++) {
+        if (tabs[i].ariaSelected === 'true') {
+            currentTab = tabs[i]
+        }
+    }
+
+    if (keyPressed == arrowLeft) {
+        if (!currentTab.previousElementSibling) {
+            pageChange_click('titan')
+            return
+        }
+        switch (currentTab.previousElementSibling.innerText) {
+            case "MOON":
+                pageChange_click('moon')
+                return
+            case "MARS":
+                pageChange_click('mars')
+                return
+            case "EUROPA":
+                pageChange_click('europa')
+        }
+    }
+
+    if (keyPressed == arrowRight) {
+        if (!currentTab.nextElementSibling) {
+            pageChange_click('moon')
+            return
+        }
+
+        switch (currentTab.nextElementSibling.innerText) {
+            case "MARS":
+                pageChange_click('mars')
+                return
+            case "EUROPA":
+                pageChange_click('europa')
+                return
+            case "TITAN":
+                pageChange_click('titan')
+        }
+    }
+}
+
+
 /*
 ~ ----------------------------------
 ~ DESTINATION TABS -- FUNCTIONS ATTRIBUTIONS
 ~ ----------------------------------
 */
 
-btnMoon.onclick = () => pageChange('moon')
-btnMars.onclick = () => pageChange('mars')
-btnEuropa.onclick = () => pageChange('europa')
-btnTitan.onclick = () => pageChange('titan')
+btnMoon.onclick = () => pageChange_click('moon')
+btnMars.onclick = () => pageChange_click('mars')
+btnEuropa.onclick = () => pageChange_click('europa')
+btnTitan.onclick = () => pageChange_click('titan')
+tabList.onkeydown = pageChange_keydown

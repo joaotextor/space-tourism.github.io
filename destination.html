@@ -15,13 +15,13 @@
   <link href="css/styles.css" rel="stylesheet">
 
   <!-- Load the script with 'defer', which waits for the page to load so it can load the script -->
-  <script src="js/index.js" defer></script> 
+  <script src="js/navigation.js" defer></script> 
   <script src="js/destination.js" defer></script> 
   <base href="/">
   
 </head>
   <body class="destination">
-    <a class="skip-to-content" href="#main">Skip to content</a>
+    <a class="skip-to-content" href="destination.html#main">Skip to content</a>
     <header class="primary-header flex">
       <div>
         <img class="logo" src="./assets/shared/logo.svg" alt="logo">
@@ -37,7 +37,7 @@
       </nav>
     </header>
 
-    <main id="main" class="grid-container grid-container--destination flow">
+    <main class="grid-container grid-container--destination flow">
         <h1 class="numbered-title ff-sans-cond letter-spacing-3"><span aria-hidden="true">01</span> Pick your destination</h1>
         <picture>
           <source id="webp-image" srcset="assets/destination/image-moon.webp" type="image/webp">
@@ -45,11 +45,11 @@
         </picture>
         
 
-        <div class="tab-list underline-indicators ff-sans-cond flex">
-            <button id="btn-moon" aria-selected="true" class="text-accent uppercase letter-spacing-2">Moon</button>
-            <button id="btn-mars" aria-selected="false" class="text-accent uppercase letter-spacing-2">Mars</button>
-            <button id="btn-europa" aria-selected="false" class="text-accent uppercase letter-spacing-2">Europa</button>
-            <button id="btn-titan" aria-selected="false" class="text-accent uppercase letter-spacing-2">Titan</button>
+        <div class="tab-list underline-indicators ff-sans-cond flex" role="tablist" aria-label="destination list">
+            <button id="main" role="tab" aria-selected="true" aria-controls="moon-tab" class="text-accent uppercase letter-spacing-2">Moon</button>
+            <button role="tab" aria-selected="false" aria-controls="mars-tab" class="text-accent uppercase letter-spacing-2">Mars</button>
+            <button role="tab" aria-selected="false" aria-controls="europa-tab" class="text-accent uppercase letter-spacing-2">Europa</button>
+            <button role="tab" aria-selected="false" aria-controls="titan-tab" class="text-accent uppercase letter-spacing-2">Titan</button>
         </div>
 
         <article class="destination-info flow">

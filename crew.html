@@ -15,12 +15,12 @@
   <link href="css/styles.css" rel="stylesheet">
 
   <!-- Load the script with 'defer', which waits for the page to load so it can load the script -->
-  <script src="js/index.js" defer></script> 
+  <script src="js/navigation.js" defer></script> 
   <script src="js/crew.js" defer></script> 
   
 </head>
 <body class="crew">
-  <a class="skip-to-content" href="#main">Skip to content</a>
+  <a class="skip-to-content" href="crew.html#main">Skip to content</a>
     <header class="primary-header flex">
       <div>
         <img class="logo" src="./assets/shared/logo.svg" alt="logo">
@@ -36,7 +36,7 @@
       </nav>
     </header>
 
-    <main id="main" class="grid-container grid-container--crew flow">
+    <main class="grid-container grid-container--crew flow">
 
       <h1 class="numbered-title ff-sans-cond letter-spacing-3"><span aria-hidden="true">02</span> Meet your crew</h1>
       <div>
@@ -56,11 +56,11 @@
         </p>
       </article>
 
-      <div class="dot-indicators flex">
-        <button id="btn-commander" aria-selected="true"><span class="sr-only">The Commander</span></button>
-        <button id="btn-specialist" aria-selected="false"><span class="sr-only">The Mission Specialist</span></button>
-        <button id="btn-pilot" aria-selected="false"><span class="sr-only">The Pilot</span></button>
-        <button id="btn-engineer" aria-selected="false"><span class="sr-only">The Engineer</span></button>
+      <div class="dot-indicators flex" role="tablist" aria-label="crew list">
+        <button id="main" role="tab" aria-selected="true" aria-controls="commander-tab"><span class="sr-only">The Commander</span></button>
+        <button role="tab" aria-selected="false" aria-controls="specialist-tab"><span class="sr-only">The Mission Specialist</span></button>
+        <button role="tab" aria-selected="false" aria-controls="pilot-tab"><span class="sr-only">The Pilot</span></button>
+        <button role="tab" aria-selected="false" aria-controls="engineer-tab"><span class="sr-only">The Engineer</span></button>
       </div>
 
     </main>
