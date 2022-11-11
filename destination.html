@@ -21,7 +21,7 @@
   
 </head>
   <body class="destination">
-    <a class="skip-to-content" href="destination.html#main">Skip to content</a>
+    <a class="skip-to-content" href="destination.html#main" tabindex="1">Skip to content</a>
     <header class="primary-header flex">
       <div>
         <img class="logo" src="./assets/shared/logo.svg" alt="logo">
@@ -46,13 +46,13 @@
         
 
         <div class="tab-list underline-indicators ff-sans-cond flex" role="tablist" aria-label="destination list">
-            <button id="main" role="tab" aria-selected="true" aria-controls="moon-tab" class="text-accent uppercase letter-spacing-2">Moon</button>
-            <button role="tab" aria-selected="false" aria-controls="mars-tab" class="text-accent uppercase letter-spacing-2">Mars</button>
-            <button role="tab" aria-selected="false" aria-controls="europa-tab" class="text-accent uppercase letter-spacing-2">Europa</button>
-            <button role="tab" aria-selected="false" aria-controls="titan-tab" class="text-accent uppercase letter-spacing-2">Titan</button>
+            <button id="main" role="tab" aria-selected="true" aria-controls="moon-tab" class="text-accent uppercase letter-spacing-2" tabindex="2">Moon</button>
+            <button role="tab" aria-selected="false" aria-controls="mars-tab" class="text-accent uppercase letter-spacing-2" tabindex="1">Mars</button>
+            <button role="tab" aria-selected="false" aria-controls="europa-tab" class="text-accent uppercase letter-spacing-2" tabindex="1">Europa</button>
+            <button role="tab" aria-selected="false" aria-controls="titan-tab" class="text-accent uppercase letter-spacing-2" tabindex="1">Titan</button>
         </div>
 
-        <article class="destination-info flow">
+        <article class="destination-info flow" tabindex="3">
             <h2 id="destination-name" class="ff-serif text-white fs-800 uppercase">Moon</h2>
             <p id="destination-description" class="ff-sans text-accent">
                 See our planet as you’ve never seen it before. A perfect relaxing trip away to help 

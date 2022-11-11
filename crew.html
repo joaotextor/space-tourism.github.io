@@ -20,7 +20,7 @@
   
 </head>
 <body class="crew">
-  <a class="skip-to-content" href="crew.html#main">Skip to content</a>
+  <a class="skip-to-content" href="crew.html#main" tabindex="1">Skip to content</a>
     <header class="primary-header flex">
       <div>
         <img class="logo" src="./assets/shared/logo.svg" alt="logo">
@@ -46,7 +46,7 @@
         </picture>
       </div>
 
-      <article class="crew-info flow">
+      <article class="crew-info flow" tabindex="3">
         <header class="flow flow--space-small">
           <h2 id="crew-role" class="ff-serif text-white fs-600 uppercase">Commander</h2>
           <p id="crew-name" class="ff-serif fs-700 uppercase">Douglas Hurley</p>
@@ -57,10 +57,10 @@
       </article>
 
       <div class="dot-indicators flex" role="tablist" aria-label="crew list">
-        <button id="main" role="tab" aria-selected="true" aria-controls="commander-tab"><span class="sr-only">The Commander</span></button>
-        <button role="tab" aria-selected="false" aria-controls="specialist-tab"><span class="sr-only">The Mission Specialist</span></button>
-        <button role="tab" aria-selected="false" aria-controls="pilot-tab"><span class="sr-only">The Pilot</span></button>
-        <button role="tab" aria-selected="false" aria-controls="engineer-tab"><span class="sr-only">The Engineer</span></button>
+        <button id="main" role="tab" tabindex="2" aria-selected="true" aria-controls="commander-tab"><span class="sr-only">The Commander</span></button>
+        <button role="tab" tabindex="1" aria-selected="false" aria-controls="specialist-tab"><span class="sr-only">The Mission Specialist</span></button>
+        <button role="tab" tabindex="1" aria-selected="false" aria-controls="pilot-tab"><span class="sr-only">The Pilot</span></button>
+        <button role="tab" tabindex="1" aria-selected="false" aria-controls="engineer-tab"><span class="sr-only">The Engineer</span></button>
       </div>
 
     </main>

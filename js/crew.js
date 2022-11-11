@@ -95,8 +95,10 @@ const pageChange_keydown = (e) => {
     let currentTab = ''
 
     for (let i=0; i<tabs.length; i++) {
+        tabs[i].setAttribute('tabindex', 1)
         if (tabs[i].ariaSelected === 'true') {
             currentTab = tabs[i]
+            currentTab.setAttribute('tabindex', 2)
         }
     }
 
@@ -123,7 +125,7 @@ const pageChange_keydown = (e) => {
             pageChange_click('commander')
             return
         }
-        
+
         switch (currentTab.nextElementSibling.innerText) {
             case "The Mission Specialist":
                 pageChange_click('specialist')
