@@ -469,6 +469,7 @@
     .grid-container--technology > img {
         max-width: 100%;
         justify-self: right;
+        content: url("/assets/technology/image-launch-vehicle-portrait.jpg");
     }
 
 }
