@@ -8,14 +8,7 @@ function showError() {
     console.log('Página não encontrada!')
 }
 
-window.onload = async () => {
-    const dados = await fetch("./data.json")
-        .then(jsonify)
-        .catch(showError)
 
-        technology = dados.technology
-        console.log(technology)
-}
 
 /*
 ~ ----------------------------------
@@ -46,6 +39,18 @@ const techDetails = document.getElementById('tech-details')
 ~ WINDOWS RESIZE FUNCTION
 ~ ----------------------------------
 */
+
+window.onload = async () => {
+    const dados = await fetch("./data.json")
+        .then(jsonify)
+        .catch(showError)
+
+        technology = dados.technology
+        if (window.matchMedia("(min-width: 51em)").matches) {
+            techImage.src = "./assets/technology/image-launch-vehicle-portrait.jpg"
+        }
+        
+}
 
 window.onresize = () => {
     let techIndex = -1
@@ -105,8 +110,10 @@ const pageChange_click = (tech) => {
     // Images
     if (window.matchMedia("(min-width: 51em)").matches) {
         techImage.src = technology[techIndex].images.portrait
+        console.log(techImage.src)
     } else {
         techImage.src = technology[techIndex].images.landscape
+        console.log(techImage.src)
     }
     
 }
