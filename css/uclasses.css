@@ -243,7 +243,7 @@
     align-self: end;
 }
 
-.grid-container--technology img {
+.grid-container--technology picture {
     grid-area: image;
     align-self: start;
     margin: 0;
@@ -315,7 +315,7 @@
         grid-template-rows: 4% max-content 10% auto;
     }
 
-    .grid-container--technology img {
+    .grid-container--technology picture {
         align-self: center;
         /* margin-right: -30px; */
     }
@@ -433,7 +433,7 @@
             '. tabs content image'
             '. . . image';
             padding-left: 1.5rem;
-            grid-template-rows: 10% auto 20%;
+            grid-template-rows: 10% auto 15%;
             grid-template-columns: .75fr .75fr 11fr 8fr;
     }
 
@@ -466,13 +466,9 @@
         line-height: 1.8;
     }
 
-    .grid-container--technology > img {
+    .grid-container--technology > picture {
         max-width: 100%;
         justify-self: right;
-    }
-
-    .grid-container--tecnology > img[src="assets/technology/image-launch-vehicle-landscape.jpg"] {
-        content: url("../assets/technology/image-launch-vehicle-portrait.jpg");
     }
 
 }

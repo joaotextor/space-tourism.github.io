@@ -26,6 +26,7 @@ const btnCapsule = document.querySelector('[aria-controls="capsule-tab"]')
 const btnSpaceport = document.querySelector('[aria-controls="spaceport-tab"]')
 
 //* IMAGES
+const techPicture = document.getElementById('tech-picture')
 const techImage = document.getElementById('tech-image')
 
 //* TECH
@@ -46,9 +47,9 @@ window.onload = async () => {
         .catch(showError)
 
         technology = dados.technology
-        if (window.matchMedia("(min-width: 51em)").matches) {
-            techImage.src = "./assets/technology/image-launch-vehicle-portrait.jpg"
-        }
+        // if (window.matchMedia("(min-width: 51em)").matches) {
+        //     techImage.src = "./assets/technology/image-launch-vehicle-portrait.jpg"
+        // }
         
 }
 
@@ -67,7 +68,7 @@ window.onresize = () => {
     } 
 
     if (window.matchMedia("(min-width: 51em)").matches) {
-        techImage.src = technology[techIndex].images.portrait
+        techPicture.srcset = technology[techIndex].images.portrait
     } else {
         techImage.src = technology[techIndex].images.landscape
     }
@@ -109,11 +110,9 @@ const pageChange_click = (tech) => {
 
     // Images
     if (window.matchMedia("(min-width: 51em)").matches) {
-        techImage.src = technology[techIndex].images.portrait
-        console.log(techImage.src)
+        techPicture.srcset = technology[techIndex].images.portrait
     } else {
         techImage.src = technology[techIndex].images.landscape
-        console.log(techImage.src)
     }
     
 }
