@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3/hub/space-tourism-website-responsive-and-accessibility-ready-O_o0FZa6aK)
+- Live Site URL: [Add live site URL here](https://joaotextor.com/space-tourism)
 
 ## My process
 
