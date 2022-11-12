@@ -4,6 +4,11 @@
 #####################################################
 *.sketch
 *.fig
+design-system.html
+_README.md
+space-tourism-website-figma.zip
+space-tourism-website-figma
+.vscode
 
 # Avoid accidental XD upload if you convert the design file
 ###############################################

@@ -295,10 +295,12 @@
             'content'
             'dots'
             'image';
-        grid-template-rows: 5% 35% 3% minmax(58%, 20rem);
+        grid-template-rows: 5% 35% 3% auto;
     }
+   
 
     .grid-container--crew div:first-of-type {
+        /* max-height: 80%; */
         align-self: end;
     }
 
@@ -337,7 +339,7 @@
 
 }
 
-@media (min-width: 45em) {
+@media (min-width: 51em) {
     .grid-container {
         text-align: left;
         column-gap: var(--container-gap, 4rem);
@@ -364,14 +366,22 @@
     .grid-container--destination {
         justify-items: start;
         align-content: start;
+        padding-left: 3rem;
+        padding-bottom: 0;
+        margin-bottom: 0;
         grid-template-areas:
             '. title title .'
             '. image tabs .'
             '. image content .';
+        grid-template-rows: 12% 12% 74%;
+    }
+
+    .grid-container--destination .destination-info {
+        align-self: start;
     }
 
     .tab-list {
-        padding-top: 2rem;
+        align-self: start;
     }
 
     .grid-container--destination > picture {
@@ -390,8 +400,10 @@
             '. title image .'
             '. content image .'
             '. dots image .';
+        padding-left: 3rem;
         grid-template-columns: .25fr 11.5fr 8fr .25fr;
-        grid-template-rows: .5fr 2.5fr .5fr;
+        grid-template-rows: .5fr 70% 1fr;
+        overflow: hidden;
     }
 
     .grid-container--crew > .numbered-title {
@@ -400,12 +412,13 @@
 
     .grid-container--crew picture {
         grid-column: span 2;
-        max-width: 100%;
-        /* width: min(650px, 99%); */
+        max-width: 88%;
+        /* width: max(650px, 99%); */
     }
 
     .grid-container--crew .crew-info {
         justify-self: start;
+        padding-top: 5%
     }
 
     .grid-container--crew .dot-indicators {
@@ -419,6 +432,7 @@
             '. title title image'
             '. tabs content image'
             '. . . image';
+            padding-left: 1.5rem;
             grid-template-rows: 10% auto 20%;
             grid-template-columns: .75fr .75fr 11fr 8fr;
     }

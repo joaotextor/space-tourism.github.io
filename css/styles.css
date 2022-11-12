@@ -3,6 +3,9 @@
 @import "cproperties.css";
 @import "components.css";
 
+html {
+    scrollbar-gutter: stable both-edges;
+}
 
 body {
     background-size: cover;
@@ -49,7 +52,7 @@ body {
     }
 }
 
-@media (min-width: 45em) {
+@media (min-width: 51em) {
     .home {
         background-image: url("../assets/home/background-home-desktop.jpg");
     }

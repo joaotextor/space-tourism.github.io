@@ -61,7 +61,7 @@ window.onresize = () => {
         techIndex = 2
     } 
 
-    if (window.matchMedia("(min-width: 45em)").matches) {
+    if (window.matchMedia("(min-width: 51em)").matches) {
         techImage.src = technology[techIndex].images.portrait
     } else {
         techImage.src = technology[techIndex].images.landscape
@@ -103,7 +103,7 @@ const pageChange_click = (tech) => {
     techDetails.innerText = technology[techIndex].description
 
     // Images
-    if (window.matchMedia("(min-width: 45em)").matches) {
+    if (window.matchMedia("(min-width: 51em)").matches) {
         techImage.src = technology[techIndex].images.portrait
     } else {
         techImage.src = technology[techIndex].images.landscape
