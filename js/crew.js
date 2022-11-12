@@ -9,7 +9,7 @@ function showError() {
 }
 
 window.onload = async () => {
-    const dados = await fetch("../data.json")
+    const dados = await fetch("./data.json")
         .then(jsonify)
         .catch()
 
