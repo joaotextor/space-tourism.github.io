@@ -33,7 +33,7 @@ Users should be able to:
 ![](./Crew_SS.png)
 ![](./Technology_SS.png)
 
-### [Live Site](https://joaotextor.com/space-tourism)
+### [Live Preview](https://joaotextor.com/space-tourism)
 
 ## My process
 
