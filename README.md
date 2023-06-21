@@ -33,9 +33,7 @@ Users should be able to:
 ![](./Crew_SS.png)
 ![](./Technology_SS.png)
 
-### Live preview
-
-- Live Site URL: [Live Site](https://joaotextor.com/space-tourism)
+### [Live Site](https://joaotextor.com/space-tourism)
 
 ## My process
 
