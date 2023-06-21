@@ -7,7 +7,7 @@ This is a solution to the [Space tourism website challenge on Frontend Mentor](h
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
-  - [Links](#links)
+  - [Live Preview](#live-preview)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
@@ -33,10 +33,9 @@ Users should be able to:
 ![](./Crew_SS.png)
 ![](./Technology_SS.png)
 
-### Links
+### Live preview
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3/hub/space-tourism-website-responsive-and-accessibility-ready-O_o0FZa6aK)
-- Live Site URL: [Add live site URL here](https://joaotextor.com/space-tourism)
+- Live Site URL: [Live Site](https://joaotextor.com/space-tourism)
 
 ## My process
 
